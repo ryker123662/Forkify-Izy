@@ -44,5 +44,6 @@ controlSearchResults();
 //?
 const init = function () {
     recipeView.addHandlerRender(controlRecipes);
+    searchView.addHandlerSearch(controlSearchResults);
 };
 init();
