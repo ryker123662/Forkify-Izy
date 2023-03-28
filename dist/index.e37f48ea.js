@@ -585,9 +585,12 @@ const controlRecipes = async function() {
 };
 const controlSearchResults = async function() {
     try {
+        //* 1) get search query
         const query = (0, _searchViewJsDefault.default).getQuery();
         if (!query) return;
+        //* 2) Load search results
         await _modelJs.loadSearchResults(query);
+        //* 3) Render results
         console.log(_modelJs.state.search.results);
     } catch (error) {
         console.log(error);
@@ -3152,7 +3155,12 @@ parcelHelpers.defineInteropFlag(exports);
 class SearchView {
     #parentEl = document.querySelector(".search");
     getQuery() {
-        return this.#parentEl.querySelector(".search__field").value;
+        const query = this.#parentEl.querySelector(".search__field").value;
+        this.#clearInput();
+        return query;
+    }
+    #clearInput() {
+        this.#parentEl.querySelector(".search__field").value = "";
     }
     addHandlerSearch(handler) {
         this.#parentEl.addEventListener("submit", function(e) {
