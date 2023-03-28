@@ -5,10 +5,15 @@ import resultsView from "./views/resultsView.js";
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import { async } from "regenerator-runtime";
 
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
+
+if (module.hot) {
+    module.hot.accept();
+}
 
 const controlRecipes = async function () {
     try {
@@ -32,7 +37,6 @@ const controlRecipes = async function () {
 const controlSearchResults = async function () {
     try {
         resultsView.renderSpinner();
-        console.log(resultsView);
 
         //* 1) get search query
         const query = searchView.getQuery();
@@ -42,7 +46,7 @@ const controlSearchResults = async function () {
         await model.loadSearchResults(query);
 
         //* 3) Render results
-        console.log(model.state.search.results);
+        resultsView.render(model.state.search.results);
     } catch (error) {
         console.log(error);
     }
