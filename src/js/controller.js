@@ -57,11 +57,15 @@ const controlSearchResults = async function () {
         console.log(error);
     }
 };
-controlSearchResults();
+
+const controlPagination = function () {
+    console.log("Pag controller");
+};
 
 //?
 const init = function () {
     recipeView.addHandlerRender(controlRecipes);
     searchView.addHandlerSearch(controlSearchResults);
+    paginationView.addHandlerClick();
 };
 init();

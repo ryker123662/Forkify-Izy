@@ -4,6 +4,13 @@ import icons from "../../img/icons.svg";
 class PaginationView extends View {
     _parentElement = document.querySelector(".pagination");
 
+    addHandlerClick(handler) {
+        this._parentElement.addEventListener("click", function (e) {
+            const btn = e.target.closest(".btn--inline");
+            console.log(btn);
+        });
+    }
+
     _generateMarkup() {
         const currPage = this._data.page;
         const numPages = Math.ceil(
@@ -35,10 +42,23 @@ class PaginationView extends View {
         }
         //* Other page
         if (currPage < numPages) {
-            return "other page";
+            return `
+            <button class="btn--inline pagination__btn--prev">
+              <svg class="search__icon">
+                <use href="${icons}#icon-arrow-left"></use>
+              </svg>
+              <span>Page ${currPage - 1}</span>
+            </button>
+            <button class="btn--inline pagination__btn--next">
+              <span>Page ${currPage + 1}</span>
+              <svg class="search__icon">
+                <use href="${icons}#icon-arrow-right"></use>
+              </svg>
+            </button>
+          `;
         }
         //* Page 1, and there is no are page
-        return "only 1 page";
+        return "";
     }
 }
 

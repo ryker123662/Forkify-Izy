@@ -608,11 +608,14 @@ const controlSearchResults = async function() {
         console.log(error);
     }
 };
-controlSearchResults();
+const controlPagination = function() {
+    console.log("Pag controller");
+};
 //?
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipes);
     (0, _searchViewJsDefault.default).addHandlerSearch(controlSearchResults);
+    (0, _paginationViewJsDefault.default).addHandlerClick();
 };
 init();
 
@@ -3246,6 +3249,12 @@ var _iconsSvg = require("../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class PaginationView extends (0, _viewDefault.default) {
     _parentElement = document.querySelector(".pagination");
+    addHandlerClick(handler) {
+        this._parentElement.addEventListener("click", function(e) {
+            const btn = e.target.closest(".btn--inline");
+            console.log(btn);
+        });
+    }
     _generateMarkup() {
         const currPage = this._data.page;
         const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
@@ -3269,9 +3278,22 @@ class PaginationView extends (0, _viewDefault.default) {
             </button>  
           `;
         //* Other page
-        if (currPage < numPages) return "other page";
+        if (currPage < numPages) return `
+            <button class="btn--inline pagination__btn--prev">
+              <svg class="search__icon">
+                <use href="${0, _iconsSvgDefault.default}#icon-arrow-left"></use>
+              </svg>
+              <span>Page ${currPage - 1}</span>
+            </button>
+            <button class="btn--inline pagination__btn--next">
+              <span>Page ${currPage + 1}</span>
+              <svg class="search__icon">
+                <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+              </svg>
+            </button>
+          `;
         //* Page 1, and there is no are page
-        return "only 1 page";
+        return "";
     }
 }
 exports.default = new PaginationView();
