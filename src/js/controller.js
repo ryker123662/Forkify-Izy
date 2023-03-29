@@ -6,7 +6,6 @@ import paginationView from "./views/paginationView.js";
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import { async } from "regenerator-runtime";
 
 // https://forkify-api.herokuapp.com/v2
 
@@ -66,7 +65,14 @@ const controlPagination = function (goToPage) {
     paginationView.render(model.state.search);
 };
 
-//?
+//* Event handler, executed when the user clicks the button (decrease of increase)
+const controlServings = function () {
+    //* Update the recipe servings (in the state)
+    model.updateServings(6);
+
+    //* Update the recipe view
+};
+
 const init = function () {
     recipeView.addHandlerRender(controlRecipes);
     searchView.addHandlerSearch(controlSearchResults);
