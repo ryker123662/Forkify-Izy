@@ -13,7 +13,7 @@
 151C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\abortcontroller-polyfill133244810332230251 1
 169C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\css-select\lib\pseudo-selectors\filters.js133244810330591003 0
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\css-tree\lib\syntax\node\Selector.js133244810335622052 0
-118C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist133245956080137548 1
+118C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist133245967794807493 1
 150C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\htmlnano\lib\helpers.js133244810331933485 0
 160C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\iterator\reduce.js133244810359544934 0
 156C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\entities\lib\maps\legacy.json133244810332008609 0
@@ -238,7 +238,7 @@
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\diagnostic\src\diagnostic.js133244810329958466 0
 144C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\base-x\LICENSE.md133244810329813169 0
 151C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\es\array\find.js133244810346610541 0
-134C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\src\js\controller.js133245945963619576 0
+134C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\src\js\controller.js133245967464901002 0
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\array\virtual\join.js133244810354693083 0
 143C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\process\index.js133244810330279768 0
 138C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\yaml\seq.js133244810333730142 0
@@ -261,7 +261,7 @@
 157C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\stable\regexp\match.js133244810356167539 0
 148C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\import-fresh\index.js133244810329337910 0
 144C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\lmdb\node_modules133244810320607016 1
-140C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\src\js\views\recipeView.js133245951595193131 0
+140C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\src\js\views\recipeView.js133245967794490408 0
 168C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\modules\es.array.last-index-of.js133244810341211144 0
 138C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\web133244810372110431 1
 159C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\nth-check\lib\esm\compile.js.map133244810332068603 0
@@ -467,7 +467,7 @@
 157C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\optimizer-htmlnano\lib133244810330108780 1
 165C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\transformer-react-refresh-wrap133244810331207261 1
 135C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\domutils133244810332535660 1
-137C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\icons.21bad73c.svg133245951597678688 0
+137C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\icons.21bad73c.svg133245959730247709 0
 178C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\internals\get-async-iterator-flattenable.js133244810349106332 0
 146C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\lmdb\src\writer.cpp133244810335366640 0
 158C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\css-tree\lib\syntax\node\CDO.js133244810332089909 0
@@ -2171,7 +2171,7 @@
 149C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\picomatch\lib\parse.js133244810330209099 0
 153C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\full\date\index.js133244810352639288 0
 160C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\modules\es.parse-float.js133244810341997666 0
-137C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\icons.dfd7a6db.svg133245951597688671 0
+137C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\icons.dfd7a6db.svg133245959730247709 0
 174C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\modules\esnext.object.iterate-values.js133244810344140244 0
 161C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@swc\helpers\src\_to_primitive.mjs133244810336337298 0
 153C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\picomatch\lib\picomatch.js133244810330475766 0
@@ -5131,7 +5131,7 @@
 161C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\full\string\starts-with.js133244810364035985 0
 170C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\core\test\fixtures\config\.parcelrc133244810331768173 0
 156C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\full\string\strike.js133244810364150535 0
-137C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.f7626f62.css133245951597428659 0
+137C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.f7626f62.css133245959729827708 0
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\package-manager\src\index.js133244810330746196 0
 153C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\full\string\sub.js133244810364490547 0
 156C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\full\string\substr.js133244810364600525 0
@@ -6232,7 +6232,7 @@
 164C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\typed-array\entries.js133244810340702065 0
 154C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\math\tanh.js133244810365355698 0
 161C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\typed-array\fill.js133244810345216118 0
-141C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.f7626f62.css.map133245951597448675 0
+141C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.f7626f62.css.map133245959729867717 0
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\typed-array\filter.js133244810345509927 0
 166C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\typed-array\find-last.js133244810346444767 0
 170C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\typed-array\float64-array.js133244810347980173 0
@@ -6483,7 +6483,7 @@
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\date\to-gmt-string.js133244810365895713 0
 146C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\acorn\dist\acorn.js133244810330726203 0
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\date\to-iso-string.js133244810365965689 0
-136C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\logo.726d37a8.png133245951596763541 0
+136C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\logo.726d37a8.png133245959729296731 0
 164C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\async-iterator\drop.js133244810340288221 0
 166C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\async-iterator\filter.js133244810345489918 0
 164C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\core-js\actual\async-iterator\find.js133244810346580565 0
@@ -7286,7 +7286,7 @@
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@swc\helpers\lib\_sliced_to_array.js133244810334818217 0
 169C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@swc\helpers\lib\_sliced_to_array_loose.js133244810334848227 0
 163C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@swc\helpers\lib\_super_prop_base.js133244810334879927 0
-139C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\favicon.8b2f57bf.png133245951597143536 0
+139C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\favicon.8b2f57bf.png133245959729677705 0
 162C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@lmdb\lmdb-win32-x64\node.napi.node133244810333559835 0
 177C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@swc\helpers\lib\_tagged_template_literal_loose.js133244810334940000 0
 153C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@swc\helpers\lib\_throw.js133244810334959986 0
@@ -7706,7 +7706,7 @@
 145C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\events\lib133244810331873359 1
 165C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\events\test\Disposable.test.js133244810330259092 0
 159C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\events\src\Disposable.js133244810329898470 0
-136C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.e37f48ea.js133245956080107565 0
+136C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.e37f48ea.js133245967794767468 0
 155C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\events\src\errors.js133244810330726203 0
 154C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\events\src\index.js133244810331152043 0
 154C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\@parcel\events\src\types.js133244810331768173 0
@@ -7928,6 +7928,6 @@
 138C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\.bin\semver133244810372402228 0
 140C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\.bin\svgo.cmd133244810372402228 0
 142C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\node_modules\.bin\terser.ps1133244810372402228 0
-140C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.e37f48ea.js.map133245956080127558 0
-129C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.html133245951597628666 0
+140C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.e37f48ea.js.map133245967794797476 0
+129C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\index.html133245959730027703 0
 147C:\Users\Tomek\Desktop\javascript\complete-javascript-course-master\complete-javascript-course-master\Forkify-Izy\dist\StartingCode.3464ddca.js.map133244792056887933 0

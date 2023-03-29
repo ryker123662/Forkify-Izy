@@ -68,13 +68,15 @@ const controlPagination = function (goToPage) {
 //* Event handler, executed when the user clicks the button (decrease of increase)
 const controlServings = function () {
     //* Update the recipe servings (in the state)
-    model.updateServings(6);
+    model.updateServings(8);
 
     //* Update the recipe view
+    recipeView.render(model.state.recipe);
 };
 
 const init = function () {
     recipeView.addHandlerRender(controlRecipes);
+    recipeView.addHandlerUpdateServings(controlServings);
     searchView.addHandlerSearch(controlSearchResults);
     paginationView.addHandlerClick(controlPagination);
 };
