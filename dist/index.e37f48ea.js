@@ -601,7 +601,7 @@ const controlSearchResults = async function() {
         await _modelJs.loadSearchResults(query);
         //* 3) Render results
         // resultsView.render(model.state.search.results);
-        (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultsPage());
+        (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultsPage(1));
         //* 4) Render the initial pagination buttons
         (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
     } catch (error) {
@@ -3247,12 +3247,31 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class PaginationView extends (0, _viewDefault.default) {
     _parentElement = document.querySelector(".pagination");
     _generateMarkup() {
-        const numPages = this._data.results / this._data.resultsPerPage;
+        const currPage = this._data.page;
+        const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
         console.log(numPages);
-    //* Page 1, and there are other pages
-    //* Page 1, and there is no are page
-    //* Last page
-    //* Other page
+        //* Page 1, and there are other pages
+        if (currPage === 1 && numPages > 1) return `
+            <button class="btn--inline pagination__btn--next">
+              <span>Page ${currPage + 1}</span>
+              <svg class="search__icon">
+                <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+              </svg>
+            </button>
+          `;
+        //* Last page
+        if (currPage === numPages && numPages > 1) return `
+            <button class="btn--inline pagination__btn--prev">
+              <svg class="search__icon">
+                <use href="${0, _iconsSvgDefault.default}#icon-arrow-left"></use>
+              </svg>
+              <span>Page ${currPage - 1}</span>
+            </button>  
+          `;
+        //* Other page
+        if (currPage < numPages) return "other page";
+        //* Page 1, and there is no are page
+        return "only 1 page";
     }
 }
 exports.default = new PaginationView();
