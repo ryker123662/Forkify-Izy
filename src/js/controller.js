@@ -3,6 +3,7 @@ import recipeView from "./views/recipeView.js";
 import searchView from "./views/searchView.js";
 import resultsView from "./views/resultsView.js";
 import paginationView from "./views/paginationView.js";
+import bookmarksView from "./views/bookmarksView.js";
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
@@ -15,6 +16,7 @@ import "regenerator-runtime/runtime";
 //     module.hot.accept();
 // }
 
+//? Responsible for loading the recipe
 const controlRecipes = async function () {
     try {
         //* id of the recipe
@@ -24,16 +26,20 @@ const controlRecipes = async function () {
         if (!id) return;
         recipeView.renderSpinner();
 
-        //? 0) Results view to mark selected search results
+        //? 0) Update results view to mark selected search results
         resultsView.update(model.getSearchResultsPage());
 
-        //? 1. Loading the recipe || Getting access to the state
+        //? 1) Updating the bookmarks view
+        bookmarksView.update(model.state.bookmarks);
+
+        //? 2) Loading the recipe || Getting access to the state
         await model.loadRecipe(id);
 
-        //? 2. Rendering the recipe
+        //? 3) Rendering the recipe
         recipeView.render(model.state.recipe);
     } catch (error) {
         recipeView.renderError();
+        console.error(error);
     }
 };
 
@@ -78,24 +84,33 @@ const controlServings = function (newServings) {
     recipeView.update(model.state.recipe);
 };
 
-//* Controller function to add bookmarks
+//! Controller function to add bookmarks
 const controlAddBookmark = function () {
+    //? 1) Add/remove bookmarks
     if (!model.state.recipe.bookmarked) {
         model.addBookmark(model.state.recipe);
     } else {
         model.deleteBookmark(model.state.recipe.id);
     }
 
-    // console.log(model.state.recipe);
-
+    //? 2) Update the recipe view
     recipeView.update(model.state.recipe);
+
+    //? 3) Render the bookmarks
+    bookmarksView.render(model.state.bookmarks);
+};
+
+const controlBookmarks = function () {
+    bookmarksView.render(model.state.bookmarks);
 };
 
 const init = function () {
+    bookmarksView.addHandlerRender(controlBookmarks);
     recipeView.addHandlerRender(controlRecipes);
     recipeView.addHandlerUpdateServings(controlServings);
     recipeView.addHandlerBookmark(controlAddBookmark);
     searchView.addHandlerSearch(controlSearchResults);
     paginationView.addHandlerClick(controlPagination);
+    // model.restoreBookmarks();
 };
 init();
