@@ -625,8 +625,9 @@ const controlServings = function(newServings) {
 };
 //* Controller function to add bookmarks
 const controlAddBookmark = function() {
-    _modelJs.addBookmark(_modelJs.state.recipe);
-    console.log(_modelJs.state.recipe);
+    if (!_modelJs.state.recipe.bookmarked) _modelJs.addBookmark(_modelJs.state.recipe);
+    else _modelJs.deleteBookmark(_modelJs.state.recipe.id);
+    // console.log(model.state.recipe);
     (0, _recipeViewJsDefault.default).update(_modelJs.state.recipe);
 };
 const init = function() {
@@ -2036,6 +2037,7 @@ parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 parcelHelpers.export(exports, "getSearchResultsPage", ()=>getSearchResultsPage);
 parcelHelpers.export(exports, "updateServings", ()=>updateServings);
 parcelHelpers.export(exports, "addBookmark", ()=>addBookmark);
+parcelHelpers.export(exports, "deleteBookmark", ()=>deleteBookmark);
 var _configJs = require("./config.js");
 var _helpersJs = require("./helpers.js");
 const state = {
@@ -2062,6 +2064,9 @@ const loadRecipe = async function(id) {
             cookingTime: recipe.cooking_time,
             ingredients: recipe.ingredients
         };
+        //? Setting the recipe to have the bookmarks set to true or false
+        if (state.bookmarks.some((bookmark)=>bookmark.id === id)) state.recipe.bookmarked = true;
+        else state.recipe.bookmarked = false;
         console.log(state.recipe);
     } catch (error) {
         //? Temporary error handling
@@ -2106,6 +2111,13 @@ const addBookmark = function(recipe) {
     state.bookmarks.push(recipe);
     //? Mark current recipe as a bookmark
     if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+};
+const deleteBookmark = function(id) {
+    //* Delete a bookmark which has this id from bookmarks array
+    const index = state.bookmarks.findIndex((el)=>el.id === id);
+    state.bookmarks.slice(index, 1);
+    //* Set current recipe as NOT bookmarked
+    if (id === state.recipe.id) state.recipe.bookmarked = false;
 };
 
 },{"./config.js":"k5Hzs","./helpers.js":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {
