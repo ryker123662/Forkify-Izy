@@ -582,6 +582,8 @@ const controlRecipes = async function() {
         //* Render spinner
         if (!id) return;
         (0, _recipeViewJsDefault.default).renderSpinner();
+        //? 0) Results view to mark selected search results
+        (0, _resultsViewJsDefault.default).update(_modelJs.getSearchResultsPage());
         //? 1. Loading the recipe || Getting access to the state
         await _modelJs.loadRecipe(id);
         //? 2. Rendering the recipe
@@ -2289,7 +2291,6 @@ class View {
         this._parentElement.insertAdjacentHTML("afterbegin", markup);
     }
     update(data) {
-        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
         const newMarkup = this._generateMarkup();
         // creating new 'artificial' DOM
@@ -2672,7 +2673,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _view = require("./View");
 var _viewDefault = parcelHelpers.interopDefault(_view);
-var _iconsSvg = require("../../img/icons.svg");
+var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class ResultsView extends (0, _viewDefault.default) {
     _parentElement = document.querySelector(".results");
@@ -2682,9 +2683,11 @@ class ResultsView extends (0, _viewDefault.default) {
         return this._data.map(this._generateMarkupPreview).join("");
     }
     _generateMarkupPreview(result) {
+        //* we want to take everything except the first element
+        const id = window.location.hash.slice(1);
         return `
         <li class="preview">
-            <a class="preview__link" href="#${result.id}">
+            <a class="preview__link ${result.id === id ? "preview__link--active" : ""}" href="#${result.id}">
               <figure class="preview__fig">
                 <img src="${result.image}" alt="${result.title}" />
               </figure>
@@ -2699,10 +2702,7 @@ class ResultsView extends (0, _viewDefault.default) {
 }
 exports.default = new ResultsView();
 
-},{"./View":"5cUXS","../../img/icons.svg":"cMpiy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cMpiy":[function(require,module,exports) {
-module.exports = require("16a9f1a83d31ae21").getBundleURL("hWUTQ") + "icons.21bad73c.svg" + "?" + Date.now();
-
-},{"16a9f1a83d31ae21":"lgJ39"}],"dXNgZ":[function(require,module,exports) {
+},{"./View":"5cUXS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","url:../../img/icons.svg":"loVOp"}],"dXNgZ":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -3348,6 +3348,9 @@ class PaginationView extends (0, _viewDefault.default) {
 }
 exports.default = new PaginationView();
 
-},{"./View":"5cUXS","../../img/icons.svg":"cMpiy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["d8XZh","aenu9"], "aenu9", "parcelRequire3a11")
+},{"./View":"5cUXS","../../img/icons.svg":"cMpiy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cMpiy":[function(require,module,exports) {
+module.exports = require("16a9f1a83d31ae21").getBundleURL("hWUTQ") + "icons.21bad73c.svg" + "?" + Date.now();
+
+},{"16a9f1a83d31ae21":"lgJ39"}]},["d8XZh","aenu9"], "aenu9", "parcelRequire3a11")
 
 //# sourceMappingURL=index.e37f48ea.js.map
