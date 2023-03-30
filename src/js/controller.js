@@ -66,9 +66,9 @@ const controlPagination = function (goToPage) {
 };
 
 //* Event handler, executed when the user clicks the button (decrease of increase)
-const controlServings = function () {
+const controlServings = function (newServings) {
     //* Update the recipe servings (in the state)
-    model.updateServings(8);
+    model.updateServings(newServings);
 
     //* Update the recipe view
     recipeView.render(model.state.recipe);

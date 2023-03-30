@@ -614,9 +614,9 @@ const controlPagination = function(goToPage) {
     (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
 };
 //* Event handler, executed when the user clicks the button (decrease of increase)
-const controlServings = function() {
+const controlServings = function(newServings) {
     //* Update the recipe servings (in the state)
-    _modelJs.updateServings(8);
+    _modelJs.updateServings(newServings);
     //* Update the recipe view
     (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
 };
@@ -2177,10 +2177,10 @@ class RecipeView extends (0, _viewDefault.default) {
     }
     addHandlerUpdateServings(handler) {
         this._parentElement.addEventListener("click", function(e) {
-            const btn = e.target.closest(".btn--tiny");
+            const btn = e.target.closest(".btn--update-servings");
             if (!btn) return;
-            console.log(btn);
-            handler();
+            const { updateTo  } = btn.dataset;
+            if (+updateTo > 0) handler(+updateTo);
         });
     }
     _generateMarkup() {
@@ -2208,12 +2208,12 @@ class RecipeView extends (0, _viewDefault.default) {
                 <span class="recipe__info-text">servings</span>
 
                 <div class="recipe__info-buttons">
-                  <button class="btn--tiny btn--increase-servings">
+                  <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings - 1}">
                     <svg>
                       <use href="${0, _iconsSvgDefault.default}#icon-minus-circle"></use>
                     </svg>
                   </button>
-                  <button class="btn--tiny btn--increase-servings">
+                  <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings + 1}">
                     <svg>
                       <use href="${0, _iconsSvgDefault.default}#icon-plus-circle"></use>
                     </svg>
@@ -2272,7 +2272,7 @@ class RecipeView extends (0, _viewDefault.default) {
 }
 exports.default = new RecipeView();
 
-},{"./View":"5cUXS","fractional":"3SU56","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","url:../../img/icons.svg":"loVOp"}],"5cUXS":[function(require,module,exports) {
+},{"./View":"5cUXS","url:../../img/icons.svg":"loVOp","fractional":"3SU56","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cUXS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../../img/icons.svg");
