@@ -9,13 +9,14 @@ export const state = {
         page: 1,
         resultsPerPage: RES_PER_PAGE,
     },
+    bookmarks: [],
 };
 
 export const loadRecipe = async function (id) {
     try {
         const data = await getJSON(`${API_URL}/${id}`);
 
-        let { recipe } = data.data;
+        const { recipe } = data.data;
         state.recipe = {
             id: recipe.id,
             title: recipe.title,
@@ -49,6 +50,7 @@ export const loadSearchResults = async function (query) {
                 image: rec.image_url,
             };
         });
+        state.search.page = 1;
     } catch (error) {
         console.error(`${error} 🛑🛑🛑🛑🛑 `);
         throw error;
@@ -71,4 +73,15 @@ export const updateServings = function (newServings) {
     });
 
     state.recipe.servings = newServings;
+};
+
+export const addBookmark = function (recipe) {
+    //? Add a bookmark
+
+    state.bookmarks.push(recipe);
+
+    //? Mark current recipe as a bookmark
+    if (recipe.id === state.recipe.id) {
+        state.recipe.bookmarked = true;
+    }
 };
