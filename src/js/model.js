@@ -1,5 +1,5 @@
 import { API_URL, RES_PER_PAGE, KEY } from "./config.js";
-import { getJSON, sendJSON } from "./helpers.js";
+import { AJAX } from "./helpers.js";
 
 export const state = {
     recipe: {},
@@ -29,18 +29,22 @@ const createRecipeObject = function (data) {
 
 export const loadRecipe = async function (id) {
     try {
-        const data = await getJSON(`${API_URL}/${id}`);
+        const data = await AJAX(`${API_URL}${id}?key=${KEY}`);
         state.recipe = createRecipeObject(data);
 
         //? Setting the recipe to have the bookmarks set to true or false
 
-        if (state.bookmarks.some((bookmark) => bookmark.id === id)) {
+        if (state.bookmarks.some((bookmark) => bookmark.id === id))
             state.recipe.bookmarked = true;
-        } else {
-            state.recipe.bookmarked = false;
-        }
+        else state.recipe.bookmarked = false;
 
-        console.log(state.recipe);
+        // if (state.bookmarks.some((bookmark) => bookmark.id === id)) {
+        //     state.recipe.bookmarked = true;
+        // } else {
+        //     state.recipe.bookmarked = false;
+        // }
+
+        console.log(state.recipe.bookmarked);
     } catch (error) {
         //? Temporary error handling
         console.error(`${error} 🛑🛑🛑🛑🛑 `);
@@ -52,7 +56,7 @@ export const loadSearchResults = async function (query) {
     try {
         state.search.query = query;
 
-        const data = await getJSON(`${API_URL}?search=${query}`);
+        const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
         console.log(data);
 
         state.search.results = data.data.recipes.map((rec) => {
@@ -61,6 +65,7 @@ export const loadSearchResults = async function (query) {
                 title: rec.title,
                 publisher: rec.publisher,
                 image: rec.image_url,
+                ...(rec.key && { key: rec.key }),
             };
         });
         state.search.page = 1;
@@ -84,7 +89,6 @@ export const updateServings = function (newServings) {
         ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
         // newQt = oldQt * newServings / oldServings // 2 * 8/4 =4
     });
-
     state.recipe.servings = newServings;
 };
 
@@ -94,7 +98,6 @@ const persistBookmarks = function () {
 
 export const addBookmark = function (recipe) {
     //? Add a bookmark
-
     state.bookmarks.push(recipe);
 
     //? Mark current recipe as a bookmark
@@ -145,7 +148,8 @@ export const uploadRecipe = async function (newRecipe) {
                 (entry) => entry[0].startsWith("ingredient") && entry[1] !== ""
             )
             .map((ing) => {
-                const ingArr = ing[1].replaceAll(" ", "").split(",");
+                const ingArr = ing[1].split(",").map((el) => el.trim());
+                // const ingArr = ing[1].replaceAll(" ", "").split(",");
 
                 if (ingArr.length !== 3) {
                     throw new Error(
@@ -171,7 +175,7 @@ export const uploadRecipe = async function (newRecipe) {
             ingredients,
         };
 
-        const data = await sendJSON(`${API_URL}?key=${KEY}`, recipe);
+        const data = await AJAX(`${API_URL}?key=${KEY}`, recipe);
         state.recipe = createRecipeObject(data);
         // store bookmark to local storage
         addBookmark(state.recipe);
