@@ -8,6 +8,7 @@ import addRecipeView from "./views/addRecipeView.js";
 
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import { async } from "regenerator-runtime";
 
 // https://forkify-api.herokuapp.com/v2
 
@@ -105,8 +106,13 @@ const controlBookmarks = function () {
     bookmarksView.render(model.state.bookmarks);
 };
 
-const controlAddRecipe = function (newRecipe) {
-    console.log(newRecipe);
+const controlAddRecipe = async function (newRecipe) {
+    try {
+        await model.uploadRecipe(newRecipe);
+    } catch (error) {
+        console.error("🛑🛑", error);
+        addRecipeView.renderError(error.message);
+    }
 
     // Upload the new recipe data
 };
