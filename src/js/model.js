@@ -111,19 +111,13 @@ export const deleteBookmark = function (id) {
     //* Delete a bookmark which has this id from bookmarks array
 
     const index = state.bookmarks.findIndex((el) => el.id === id);
-
-    state.bookmarks.slice(index, 1);
+    state.bookmarks.splice(index, 1);
 
     //* Set current recipe as NOT bookmarked
     if (id === state.recipe.id) state.recipe.bookmarked = false;
 
     persistBookmarks();
 };
-
-// export const restoreBookmarks = () => {
-//     const storage = localStorage.getItem("bookmarks");
-//     if (storage) state.bookmarks = JSON.parse(storage);
-// };
 
 const init = function () {
     const storage = localStorage.getItem("bookmarks");
